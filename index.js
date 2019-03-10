@@ -7,7 +7,7 @@ var flash = require('express-flash');
 const Handlebars = require('handlebars');
 
 var passport = require('passport');
-var session = require('express-session');
+var session = require('cookie-session');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes');
