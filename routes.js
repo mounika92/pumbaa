@@ -8,6 +8,12 @@ module.exports = function(app) {
 
   app.get('/profile', isLoggedIn, common.profilePage);
 
+  app.get('/matches', common.matchListPage);
+
+  app.get('/match/:id', common.matchDetailPage);
+
+  app.post('/match_choice/edit', common.matchChoice);
+
   app.get('/auth/google', passport.authenticate('google', {
     scope: ['https://www.googleapis.com/auth/userinfo.profile',
           'https://www.googleapis.com/auth/userinfo.email']}

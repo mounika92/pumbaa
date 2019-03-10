@@ -6,7 +6,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        User.hasMany(models.MatchChoice, {
+          foreignKey: 'user_id',
+          as: 'matchChoices'
+        });
       }
     }
   });

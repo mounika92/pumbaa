@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <form action="/match_choice/edit" method="post" role="form">
+        <label><input type="radio" name="match_choice" value="csk" {{{setChecked 'csk' choice}}}>Team A</label><br>
+        <label><input type="radio" name="match_choice" value="rcb" {{{setChecked 'rcb' choice}}}>Team B</label><br>
+        <label><input type="radio" name="match_choice" value="neutral" {{{setChecked 'neutral' choice}}}>Neutral</label><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

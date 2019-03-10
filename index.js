@@ -1,8 +1,10 @@
 'use strict';
 
-var express = require("express");
+var express = require('express');
 var hbs = require('express-handlebars');
 var flash = require('express-flash');
+
+const Handlebars = require('handlebars');
 
 var passport = require('passport');
 var session = require('express-session');
@@ -38,6 +40,14 @@ app.use(express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/bower_components'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+Handlebars.registerHelper('setChecked', function(value, currentValue){
+  if ( value == currentValue ) {
+     return "checked";
+  } else {
+     return "";
+  }
+});
 
 app.use(session({
   secret: 'test123',
