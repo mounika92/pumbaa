@@ -15,7 +15,7 @@
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": "test1234",
     "database": "cricsome",
     "host": "127.0.0.1",
     "dialect": "mysql"
