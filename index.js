@@ -19,6 +19,7 @@ if(process.env.NODE_ENV === undefined) {
 }
 
 var PORT = 5000;
+const host = '0.0.0.0';
 
 var args = process.argv.slice(2);
 if (args.length > 0) {
@@ -61,7 +62,7 @@ app.use(passport.session());
 
 routes(app);
 
-var server = app.listen(PORT, function() {
+var server = app.listen(process.env.PORT || PORT, host, function() {
   console.log('Listening on port %s', PORT);
 });
 
